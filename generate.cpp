@@ -15,9 +15,9 @@ std::shared_ptr<IGenerate> Generate::getGen()
 
 std::string Generate::generate()
 {
-    auto p = gener->GenClassUnit("MyClass",ClassUnit::PUBLIC);
+    auto p = gener->GenClassUnit("MyClass", ClassUnit::PUBLIC | ClassUnit::ABSTRACT);
     auto method1 = gener->GenMethodUnit( "testFunc1", "void", 0 );
-    auto method2 = gener->GenMethodUnit( "testFunc2", "void",MethodUnit::STATIC );
+    auto method2 = gener->GenMethodUnit( "testFunc2", "void",MethodUnit::ABSTRACT | MethodUnit::INTERNAL );
     auto method3 = gener->GenMethodUnit( "testFunc3", "void",MethodUnit::VIRTUAL | MethodUnit::CONST );
     auto method4 = gener->GenMethodUnit( "testFunc4", "void",MethodUnit::STATIC );
     auto print = gener -> GenPrintOperatorUnit( R"(Hello,world!\n)" );
@@ -31,6 +31,3 @@ std::string Generate::generate()
 
     return p->compile();
 }
-
-
-
