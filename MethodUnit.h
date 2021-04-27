@@ -13,7 +13,10 @@ public:
         STATIC = 1,
         CONST = 1 << 1,
         VIRTUAL = 1 << 2,
-        DEFAULT = 0
+        DEFAULT = 0,
+        FINAL = 1 << 3, // java
+        ABSTRACT = 1 << 4, // java
+        INTERNAL = 1 << 5, // c#
     };
 public:
     MethodUnit(const std::string& name, const std::string& returnType, Flags flags);

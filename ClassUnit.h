@@ -11,7 +11,12 @@ public:
         PUBLIC,
         PROTECTED,
         PRIVATE,
-        DEFAULT
+        DEFAULT,
+        FINAL, // java
+        ABSTRACT, // java
+        INTERNAL, // c#
+        PROTECTED_INTERNAL, // c#
+        PRIVATE_PROTECTED // c#
     };
     static const std::vector< std::string > ACCESS_MODIFIERS;
 public:
