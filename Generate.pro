@@ -21,7 +21,6 @@ HEADERS += \
     ClassUnit.h \
     GenInterface.h \
     MethodUnit.h \
-    MyClass.h \
     PrintOperatorUnit.h \
     Unit.h \
     cgen.h \
